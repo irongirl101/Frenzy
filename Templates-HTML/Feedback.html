@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="feedback_styles.css">
+    <style>
+        body{
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="srn">SRN:</label>
+                <input type="text" id="srn" name="srn" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">E-mail:</label>
+                <input type="text" id="mail" name="mail" required><br><br>
+     
+            <p>How would you rate the event organization overall?</p>
+            <div class="form-group">
+               <label><input type="radio" name="overall" value="excellent" required> Excellent</label>
+               <label><input type="radio" name="overall" value="good"> Good</label>
+               <label><input type="radio" name="overall" value="fair"> Fair</label>
+               <label><input type="radio" name="overall" value="other"> Poor</label>
+               <label><input type="radio" name="overall" value="yery poor"> Very Poor</label>
+            </div>
+            <div class="form-group">
+                <label for="sug">Sugessions:</label>
+                <input type="text" id="sug" name="sug" required>
+            </div>
+            <button type="submit" class="btn">Submit</button><br><br><br>
+            <a href="./homepage.html">Back to home</a>
+        </form>
+    </div>
+</body>
+</html>
