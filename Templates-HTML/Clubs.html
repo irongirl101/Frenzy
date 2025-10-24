@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clubs</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   
+    body {
+      background: linear-gradient(135deg, #1b2a29, #0d1816);
+      font-family: 'Arial', sans-serif;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+   
+    .header {
+      background-color: #4e8f74; /* Medium green */
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    
+    .clubs-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .club-card {
+      background-color: rgba(34, 43, 44, 0.9);
+      border: 2px solid #66a084;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 80%;
+      max-width: 900px;
+      padding: 25px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .club-card h2 {
+      color: #a8d5ba;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .club-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #d4d4d4;
+    }
+
+    /* Hover Effect */
+    .club-card:hover {
+      transform: scale(1.02);
+      background-color: #253735;
+    }
+
+
+    @media (max-width: 768px) {
+      .club-card {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .header {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Clubs</h1>
+  </header>
+
+  <div class="clubs-container">
+    <div class="club-card">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sapien purus, convallis at semper at, auctor maximus metus.</p>
+    </div>
+
+    <div class="club-card">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sapien purus, convallis at semper at, auctor maximus metus.</p>
+    </div>
+
+    <div class="club-card">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sapien purus, convallis at semper at, auctor maximus metus.</p>
+    </div>
+
+    <div class="club-card">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sapien purus, convallis at semper at, auctor maximus metus.</p>
+    </div>
+
+    <div class="club-card">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sapien purus, convallis at semper at, auctor maximus metus.</p>
+    </div>
+  </div>
+</body>
+</html>
