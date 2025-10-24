@@ -4,24 +4,71 @@
         <title>Homepage</title>
         <link rel="stylesheet" href="styles.css">
         <style>
+            .content-wrapper{
+                display: flex;
+            }
             .container{
                 margin-top: 10%;
                 margin-left: 2%; 
                 width:1000px ; 
                 height:250px; 
             }
+            .clubs{ /*as an easter egg, this was originally called ananya*/
+                justify-content: center;
+                align-items: center;
+                margin-top: 40%;
+                /*margin-right: 50%;*/
+            }
+            .button-group {
+                margin-top: 20px;
+                margin-left: 2%;
+                display: flex;
+                gap: 15px; /* space between buttons */
+            }
+            button.btn {
+                background-color: #66a084; /* Medium green */
+                color: #fff;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1.1rem;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: background-color 0.3s ease;
+            }
+
+            button.btn:hover {
+                background-color: #4e8f74; /* Darker green on hover */
+            }
+
+            button.btn:active {
+                background-color: #3e6f56; /* Even darker green on click */
+            }
+
         </style>
     </head>
     <body>
         <h3 class="header">Homepage (add images below header)</h3>
-        <div class = "container" style = "font-size: 125%;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="content-wrapper">
+            <div class = "container" style = "font-size: 125%;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <br>
+        <div class="container" style="width:400px;height: fit-content;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-       <div class="container" style="width:400px;height: fit-content;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-       </div>
+        </div>
+        <br>
+        
+        <div class="button-group">
+                <button class="btn">Clubs</button>
+                <button class="btn">Upcoming Events</button>
+                <button class="btn">Ongoing Events</button>
+        </div>
+       
        
     </body>
-
+    
 
 </html>
