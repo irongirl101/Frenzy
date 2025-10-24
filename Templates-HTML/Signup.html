@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="srn">SRN</label>
+                <input type="text" id="srn" name="srn" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="btn"><b>Sign Up</b></button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('signup-form');
+
+        form.addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+
+            // Check for minimum password length
+            if (password.length < 8) {
+                event.preventDefault(); // Stop form submission
+                alert('Password must be at least 8 characters long.');
+                return;
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                event.preventDefault(); // Stop form submission
+                alert('Passwords do not match! Please re-enter.');
+                return;
+            }
+        });
+    </script>
+</body>
+</html>
