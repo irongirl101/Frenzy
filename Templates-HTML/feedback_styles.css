@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling*/
+body {
+  background-color: #1b2a29;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1b2a29, #0d1816);
+}
+
+/*  Container Box */
+.container {
+  background-color: rgba(34, 43, 44, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 380px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Headings */
+h2 {
+  color: #a8d5ba; 
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #c4e3cb;
+  font-size: 1.1rem;
+  margin: 20px 0 10px;
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #253735;
+  color: #e0e0e0;
+  border: 2px solid #a8d5ba; 
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #66a084;
+  outline: none;
+}
+
+/* Radio Buttons */
+.radio-group label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  accent-color: #66a084;
+  margin-right: 8px;
+}
+
+/* Submit Button */
+button.btn {
+  background-color: #66a084;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button.btn:hover {
+  background-color: #4e8f74;
+}
+
+button.btn:active {
+  background-color: #3e6f56;
+}
+
+/* Links */
+a {
+  display: block;
+  text-align: center;
+  color: #a8d5ba;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Bar (Optional)*/
+.header {
+  margin-top: 1.5%;
+  margin-bottom: 48%;
+  font-size: 200%;
+  background-color: #4e8f74;
+  padding-top: 1%;
+  padding-left: 1.5%;
+  padding-bottom: 0.5%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+}
