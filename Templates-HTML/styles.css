@@ -10,8 +10,8 @@
      font-family: 'Arial', sans-serif;
      color: #e0e0e0; /* Light gray text */
      display: flex;
-     justify-content: center;
-     align-items: center;
+     /*justify-content: center;*/
+     /*align-items: center;*/
      height: 100vh;
      background: linear-gradient(135deg, #1b2a29, #0d1816); /* Subtle green gradient */
    }
@@ -22,6 +22,8 @@
      border-radius: 8px;
      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
      width: 320px;
+     max-width:1000px; 
+     max-height: 500px;
      text-align: center;
    }
    
@@ -79,5 +81,23 @@
    
    button.btn:active {
      background-color: #3e6f56; /* Even darker green on click */
+   }
+
+   .header{
+    margin-top: 1.5%;
+    margin-bottom: 48%;
+    font-size: 200%;
+    background-color: #4e8f74;
+    padding-top: 1%;
+    padding-left: 1.5%;
+    padding-bottom: 0.5%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /*top: 0;*/
+    /*left: 0;*/
+    width: 100%;
+    z-index:1000;
+    justify-content: space-between;
    }
    
