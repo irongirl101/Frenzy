@@ -100,4 +100,9 @@
     z-index:1000;
     justify-content: space-between;
    }
+
+   th,tr,td{
+    border: solid #3e6f56 2px;
+    font-size: 150%;
+   }
    
