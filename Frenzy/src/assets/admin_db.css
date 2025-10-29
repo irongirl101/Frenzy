@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #1b2a29, #0d1816);
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Table Styling */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  background-color: rgba(34, 43, 44, 0.95);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Table Header */
+th {
+  background-color: #4e8f74; /* Medium green header */
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Table Rows */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #2a3d3a;
+  color: #e0e0e0;
+}
+
+/* Alternate row background for readability */
+tr:nth-child(even) {
+  background-color: rgba(37, 55, 53, 0.8);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(27, 42, 41, 0.8);
+}
+
+/* Hover Effect */
+tr:hover {
+  background-color: #3e6f56;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* Optional: Add subtle glow to header */
+th {
+  box-shadow: inset 0 -2px 0 #a8d5ba;
+}
