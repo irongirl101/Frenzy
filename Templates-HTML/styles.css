@@ -1,108 +1,95 @@
-/* General Reset */
-* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-   }
-   
-   body {
-     background-color: #1b2a29; /* Deep forest green */
-     font-family: 'Arial', sans-serif;
-     color: #e0e0e0; /* Light gray text */
-     /*display: flex;
-     justify-content: center;*/
-     /*align-items: center;*/
-     height: 100vh;
-     background: linear-gradient(135deg, #1b2a29, #0d1816); /* Subtle green gradient */
-   }
-   
-   .container {
-     background-color: rgba(34, 43, 44, 0.9); /* Semi-transparent dark green */
-     padding: 40px;
-     border-radius: 8px;
-     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-     width: 320px;
-     max-width:1000px; 
-     max-height: 500px;
-     text-align: center;
-   }
-   
-   h2 {
-     color: #a8d5ba; /* Light sage green */
-     font-size: 2.2rem;
-     margin-bottom: 30px;
-     font-weight: bold;
-     text-transform: uppercase;
-   }
-   
-   .form-group {
-     margin-bottom: 20px;
-   }
-   
-   label {
-     display: block;
-     font-size: 1.1rem;
-     color: #e0e0e0;
-     margin-bottom: 5px;
-   }
-   
-   input {
-     width: 100%;
-     padding: 12px;
-     font-size: 1rem;
-     background-color: #253735; /* Dark green for the input fields */
-     color: #e0e0e0;
-     border: 2px solid #a8d5ba; /* Sage green border */
-     border-radius: 5px;
-     transition: border 0.3s ease;
-   }
-   
-   input:focus {
-     border-color: #66a084; /* Slightly brighter green on focus */
-     outline: none;
-   }
-   
-   button.btn {
-     background-color: #66a084; /* Medium green */
-     color: #fff;
-     padding: 12px 24px;
-     border: none;
-     border-radius: 5px;
-     font-size: 1.1rem;
-     cursor: pointer;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     transition: background-color 0.3s ease;
-   }
-   
-   button.btn:hover {
-     background-color: #4e8f74; /* Darker green on hover */
-   }
-   
-   button.btn:active {
-     background-color: #3e6f56; /* Even darker green on click */
-   }
+:root{
+  --bg-1:#213448;
+  --bg-2:#051e3e;
+  --panel:rgba(5,30,62,0.82);
+  --accent:#94B4C1;
+  --accent-2:#547792;
+  --muted:#cfdfe6;
+  --text:#ECEFCA;
+  --border:rgba(148,180,193,0.12);
+}
 
-   .header{
-    margin-top: 1.5%;
-    margin-bottom: 48%;
-    font-size: 200%;
-    background-color: #4e8f74;
-    padding-top: 1%;
-    padding-left: 1.5%;
-    padding-bottom: 0.5%;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    /*top: 0;*/
-    /*left: 0;*/
-    width: 100%;
-    z-index:1000;
-    justify-content: space-between;
-   }
+*{margin:0;padding:0;box-sizing:border-box}
 
-   th,tr,td{
-    border: solid #3e6f56 2px;
-    font-size: 150%;
-   }
-   
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:var(--text);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  width:90%;
+  max-width:550px;
+  background:linear-gradient(180deg,var(--panel),rgba(8,20,32,0.6));
+  border-radius:12px;
+  box-shadow:0 10px 40px rgba(2,6,8,0.6);
+  border:1px solid var(--border);
+  padding:40px;
+  text-align:left;
+}
+
+h1,h2,h3{
+  color:var(--text);
+  margin-bottom:18px;
+}
+
+label{
+  display:block;
+  color:var(--muted);
+  font-weight:600;
+  margin-top:14px;
+  margin-bottom:6px;
+}
+
+input[type="text"],input[type="password"]{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(148,180,193,0.2);
+  color:var(--text);
+  font-size:1rem;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+
+input:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 10px rgba(84,119,146,0.4);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:22px;
+  background:#ECEFCA;
+  color:#051422;
+  border:0;
+  padding:12px 24px;
+  border-radius:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.btn:hover{
+  
+  opacity:0.95;
+  transform:translateY(-4px); box-shadow:0 14px 28px #000000
+}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+a:hover{text-decoration:underline}
+
+.footer{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.9rem;
+}

@@ -1,0 +1,157 @@
+:root {
+  --bg-1:#213448;
+  --bg-2:#051e3e;
+  --panel:rgba(5,30,62,0.82);
+  --accent:#94B4C1;
+  --accent-2:#547792;
+  --muted:#cfdfe6;
+  --text:#ECEFCA;
+  --border:rgba(148,180,193,0.12);
+
+  --grad1:#94B4C1;
+  --grad2:#547792;
+  --grad3:#213448;
+  --grad4:#051e3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 22px;
+  background: linear-gradient(180deg, rgba(6,22,35,0.95), rgba(4,12,22,0.8));
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--accent);
+  letter-spacing: 0.8px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 5rem auto 3rem;
+  padding: 30px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--panel), rgba(8,20,32,0.6));
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 40px rgba(2,6,8,0.6);
+}
+
+/* ================= EVENT CARD ================= */
+.event-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148,180,193,0.15);
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 18px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.event-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Text inside test box */
+.event-content {
+  flex: 1;
+}
+
+/* ================= ARROW BUTTON ================= */
+.event-action {
+  height: 42px;
+  width: 42px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.8s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animate gradient only on hover */
+.event-action:hover {
+  background: linear-gradient(135deg, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
+  background-size: 200% 200%;
+  background-position: 100% 50%;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* Arrow symbol */
+.event-action .arrow {
+  font-size: 22px;
+  font-weight: 900;
+  color: #000;
+  transition: transform 0.25s ease;
+}
+
+.event-action:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Link wrapper */
+.event-action a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 760px) {
+  .event-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 20px;
+  }
+
+  .event-action {
+    width: 38px;
+    height: 38px;
+  }
+
+  .event-content {
+    font-size: 1.1rem;
+  }
+}

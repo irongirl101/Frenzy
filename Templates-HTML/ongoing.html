@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Ongoing Events</title>
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            .container{
-                background-color: rgba(34, 43, 44, 0.9);
-                padding: 40px;
-                margin-bottom:1%; 
-            }
-        </style>
-    </head>
-    <body>
-         <h3 class="header">Ongoing Events</h3>
-         <br>
-         <br>
-         <div style="margin-top:5%; margin-left: 10%;">
-            <table>
-                <tr>
-                   <div class="container">Test 1
-                   </div>
-                </tr>
-                <tr>
-                    <div class="container">Test 2</div>
-                </tr>
-                <tr>
-                    <div class="container">Test 3</div>
-                </tr>
-            </table>
-        </div>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ongoing Events</title>
+    <!-- stylesheet kept separate as requested -->
+    <link rel="stylesheet" href="styles_events.css" />
+  </head>
+  <body>
+    <header class="header">Ongoing Events</header>
 
+    <main class="container" role="main">
+      <!-- Card 1 -->
+      <div class="event-card" id="event-1">
+        <div class="event-content">Test 1</div>
+
+        <!-- button placed inside the card (aligned to the right via CSS) -->
+        <button class="event-action" aria-label="Register Test 1">
+          <a href="https://example.com/register1" target="_blank" rel="noopener noreferrer">
+            <span class="arrow">➜</span>
+          </a>
+        </button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="event-card" id="event-2">
+        <div class="event-content">Test 2</div>
+
+        <button class="event-action" aria-label="Register Test 2">
+          <a href="https://example.com/register2" target="_blank" rel="noopener noreferrer">
+            <span class="arrow">➜</span>
+          </a>
+        </button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="event-card" id="event-3">
+        <div class="event-content">Test 3</div>
+
+        <button class="event-action" aria-label="Register Test 3">
+          <a href="https://example.com/register3" target="_blank" rel="noopener noreferrer">
+            <span class="arrow">➜</span>
+          </a>
+        </button>
+      </div>
+    </main>
+  </body>
 </html>

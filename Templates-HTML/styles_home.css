@@ -1,0 +1,176 @@
+:root{
+  --bg-1:#213448;
+  --bg-2:#213448;
+  --panel:#213448;
+  --accent:#94B4C1;
+  --accent-2:#547792;
+  --muted:#cfdfe6;
+  --text:#ECEFCA;
+  --border:rgba(148,180,193,0.12);
+}
+
+/* reset */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* page shell: use column flex so header - main - footer behave as expected */
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+
+  /* layout: header (auto), main (flex:1), footer (auto) */
+  display: flex;
+  flex-direction: column;
+  /* allow content to stretch vertically so footer sits at bottom */
+}
+
+/* header (sticky to top) */
+.header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: linear-gradient(180deg, #000000,#0f2b45);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+/* brand + nav styling */
+.header .brand {
+  width: 50%;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #051422;
+}
+
+.header .nav a{
+  color:var(--accent);
+  text-decoration:none;
+  opacity:0.95;
+  margin-left:18px;
+  transition:opacity .2s ease;
+  font-weight:600;
+}
+.header .nav a:hover{opacity:1}
+
+/* main container: allow it to grow and keep content centered horizontally.
+   It is not vertically centering the whole page (so no giant top gap). */
+.container{
+  /* let main area take remaining vertical space so footer is pushed down */
+  flex: 1 1 auto;
+
+  /* center content horizontally and control maximum width */
+  width: 100%;
+  max-width: 1100px;
+  margin: 3.5rem auto;
+  padding: 24px;
+  background: linear-gradient(180deg, #ECEFCA, #ECEFCA);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px #000000;
+  border: 1px solid var(--border);
+}
+
+/* content layout inside the container: horizontally aligned sections */
+.content-wrapper{
+  display:flex;
+  gap:28px;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+
+/* subtle muted body text */
+.container p{color:var(--muted);font-size:0.98rem}
+
+/* reusable card look */
+.card{
+  background: linear-gradient(180deg,#051422,#051422);
+  border-radius:10px;
+  padding:20px;
+  border:1px solid #547792;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.card:hover{transform:translateY(-4px); box-shadow:0 14px 28px #000000}
+
+/* main and side widths */
+.home-main { flex: 2; min-width: 0; } /* min-width:0 to prevent flex overflow with long content */
+.home-side { flex: 1; min-width: 0; }
+
+/* button group */
+.button-group{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:24px;
+}
+
+
+.btn{
+  background:#051422;
+  color:#ECEFCA;
+  border:0;
+  padding:12px 22px;
+  border-radius:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.btn:hover{
+  
+  opacity:0.95;
+  transform:translateY(-4px); box-shadow:0 14px 28px #000000
+}
+
+/* footer: sits after main; with flex layout it stays at bottom on short pages */
+.footer{
+  width:100%;
+  background:linear-gradient(180deg,#0f2b45,#000000);
+  border-top:1px solid var(--border);
+  text-align:center;
+  padding:20px 16px;
+  color:var(--muted);
+  font-size:0.95rem;
+  position:relative;
+}
+.feedbacklink
+{
+  color:#ECEFCA;
+}
+/* small tweaks */
+.muted{color:var(--muted); font-size:0.9rem}
+
+/* responsive behaviour */
+@media(max-width:900px){
+  .container{
+    margin:2rem auto;
+    padding:20px;
+    width:95%;
+  }
+
+  .content-wrapper{
+    flex-direction: column;
+    align-items: stretch;
+    gap:18px;
+  }
+
+  .header, .footer{padding:12px 16px}
+}
+
+/* prevent the container from being taller than viewport when content short:
+   limit the top/bottom margin so the page always looks balanced on small screens */
+@media (min-height:800px) {
+  .container { margin-top:3.5rem; margin-bottom:3.5rem; }
+}
